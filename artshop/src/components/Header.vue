@@ -1,4 +1,5 @@
 <template>
+<div class="header">
   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,13 +18,10 @@
           <router-link to="/like"><a class="nav-link active">Likes</a></router-link>
         </li>
       </ul>
-      <!-- <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
     </div>
   </div>
 </nav>
+</div>
 </template>
 
 <script>
@@ -35,6 +33,12 @@ export default {
 
 
 <style scoped>
+
+.header{
+    position: sticky;
+   top: 0;
+   z-index: 2;
+}
 
 a{
   text-decoration-line: none;
