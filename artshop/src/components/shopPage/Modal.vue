@@ -6,7 +6,7 @@
         <h4>{{artData[clickModal].title}}</h4>
         <p>{{artData[clickModal].content}}</p>
         <p>{{artData[clickModal].price}} 원</p>
-        <button @click="close">닫기</button>
+        <button class="btn btn-danger" @click="close">닫기</button>
     </div>
 </div>
 </template>

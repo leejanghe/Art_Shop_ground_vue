@@ -1,15 +1,22 @@
 <template>
 
 <div>
-<!-- <transition name="fade">
-<Modal @closeModal="isModal = false" :clickModal="clickModal" :artData="artData" :isModal="isModal"/>
-</transition> -->
+    <!-- 모달 -->
 <transition name="fade">
 <Modal @closeModal="isModal = false" :clickModal="clickModal" :artData="artData" :isModal="isModal"/>
 </transition>
 
-
+<!-- 검색 컴포넌트 -->
   <Hello />
+
+<!-- 정렬 버튼 -->
+<button class="btn btn-secondary m-2" @click="priceSortDe">높은 가격순</button>
+<button class="btn btn-secondary m-2" @click="priceSort">낮은 가격순</button>
+<button class="btn btn-secondary m-2" @click="sortBack">되돌리기</button>
+<button class="btn btn-secondary m-2" @click="sortabc">가나다 정렬</button>
+<button class="btn btn-secondary m-2" @click="sortcba">다나가 정렬</button>
+
+<!-- 데이터 바인딩 카드 -->
   <div class="background_shop">
       <!-- 수신 코드 @openModal -->
   <ShopBody @openModal="isModal =true; clickModal = $event" :artData="artData[i]" v-for="(a,i) in artData" :key="i" />
@@ -34,10 +41,41 @@ export default {
     },
     data() {
         return {
-            artData : data,
+            artData : [...data],
+            copyArtData : [...data],
             isModal : false,
             clickModal : 0,
         }
+    },
+    // 정렬 기능 함수
+    methods: {
+        priceSort(){
+      this.artData.sort((a,b)=>{
+        return a.price - b.price;
+      })
+    },
+    priceSortDe(){
+      this.artData.sort((a,b)=>{
+        return b.price - a.price;
+      })
+    },
+     sortabc(){
+      this.artData.sort((a,b)=>{
+        if(a.title < b.title) return -1;
+        if(a.title > b.title) return 1;
+        if(a.title === b.title) return 0;
+      });
+    },
+    sortcba(){
+      this.artData.sort((b,a)=>{
+        if(a.title < b.title) return -1;
+        if(a.title > b.title) return 1;
+        if(a.title === b.title) return 0;
+      });
+    },
+    sortBack(){
+      this.artData = [...this.copyArtData];
+    },
     },
 }
 </script>
@@ -73,10 +111,6 @@ transform: translate(-50%, -50%);
   border-radius: 8px;
   padding: 20px;
 }
-
-/* .modalImg{
-  width:30%
-} */
 
 .start {
   opacity: 0;

@@ -1,5 +1,4 @@
 <template>
-
     <div class="project">
           <img className="project__img" :src="artData.image"/>
             <div class="project__description">
@@ -7,7 +6,6 @@
                 <h5 class="imgtext">{{artData.price}} 원</h5>
             </div>
     </div>
-
 </template>
 
 <script>
