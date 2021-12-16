@@ -1,13 +1,13 @@
 <template>
   <form class="d-flex">
-        <input class="form-control me-10" type="search" placeholder="Search" aria-label="Search">
+        <input @input="search($event.target.value)" class="form-control me-10" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-danger" type="submit">Search</button>
       </form>
 </template>
 
 <script>
 export default {
-
+  name: 'Search',
 }
 </script>
 

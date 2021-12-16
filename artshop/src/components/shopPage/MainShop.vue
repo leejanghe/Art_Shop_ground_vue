@@ -12,7 +12,7 @@
 <!-- 정렬 버튼 -->
 <button class="btn btn-secondary m-2" @click="priceSortDe">높은 가격순</button>
 <button class="btn btn-secondary m-2" @click="priceSort">낮은 가격순</button>
-<button class="btn btn-secondary m-2" @click="sortBack">되돌리기</button>
+<button class="btn btn-success m-2" @click="sortBack">되돌리기</button>
 <button class="btn btn-secondary m-2" @click="sortabc">가나다 정렬</button>
 <button class="btn btn-secondary m-2" @click="sortcba">다나가 정렬</button>
 
@@ -27,7 +27,7 @@
 <script>
 import Hello from './Hello.vue'
 import ShopBody from './ShopBody.vue'
-import data from './../../assets/data.js'
+import data from '../../assets/data.js'
 import Modal from './Modal.vue'
 
 console.log('11',data)
