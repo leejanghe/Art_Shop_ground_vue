@@ -3,7 +3,8 @@
     <div class="project">
           <img className="project__img" :src="artData.image"/>
             <div class="project__description">
-                <h3 class="imgtext">{{artData.title}}</h3>
+                <h3 @click="send" class="imgtext">{{artData.title}}</h3>
+                <h5 class="imgtext">{{artData.price}} 원</h5>
             </div>
     </div>
 
@@ -15,6 +16,12 @@ export default {
     props: {
         artData: Array,
     },
+    // 부모에게 보낼때 emit쓰기 프롭스는 read only여서 변경 x
+     methods:{
+        send(){
+            this.$emit('openModal', this.artData.id)
+        }
+    }
 }
 </script>
 
