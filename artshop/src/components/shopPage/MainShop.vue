@@ -1,7 +1,9 @@
 <template>
 <div>
   <Hello />
-  <ShopBody :artData="artData" />
+  <div class="background_shop">
+  <ShopBody :artData="artData[i]" v-for="(a,i) in artData" :key="i" />
+  </div>
 </div>
 </template>
 
@@ -27,5 +29,9 @@ export default {
 </script>
 
 <style>
+.background_shop{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 </style>
