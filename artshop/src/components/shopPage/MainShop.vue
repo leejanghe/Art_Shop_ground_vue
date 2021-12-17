@@ -21,6 +21,10 @@
       <!-- 수신 코드 @openModal -->
   <ShopBody @openModal="isModal =true; clickModal = $event" :artData="artData[i]" v-for="(a,i) in artData" :key="i" />
   </div>
+
+<!-- 더보기 -->
+    <button @click="more" class="btn btn-warning m-2">더보기</button>
+
 </div>
 </template>
 
@@ -29,6 +33,7 @@ import Hello from './Hello.vue'
 import ShopBody from './ShopBody.vue'
 import data from '../../assets/data.js'
 import Modal from './Modal.vue'
+import axios from 'axios'
 
 console.log('11',data)
 
@@ -49,6 +54,25 @@ export default {
     },
     // 정렬 기능 함수
     methods: {
+        more(){
+            axios.get('https://run.mocky.io/v3/b5a2228a-deaf-405f-af77-85b4a955b6d9')
+            .then((a)=>{
+                // console.log(a)
+                // console.log(a.data)
+                this.artData.push(a.data)
+                axios.get('https://run.mocky.io/v3/c1d882fc-08e4-46e9-acf4-a3ae2e14636a')
+                .then((b)=>{
+                    // console.log(b)
+                    this.artData.push(b.data)
+                    axios.get('https://run.mocky.io/v3/2834c58c-0530-4a8e-8762-dd330745db8c')
+                    .then((c)=>{
+                        this.artData.push(c.data)
+                    }).catch((err)=>{
+                        console.log(err)
+                    })
+                })
+            })
+        },
         priceSort(){
       this.artData.sort((a,b)=>{
         return a.price - b.price;

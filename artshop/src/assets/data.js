@@ -66,4 +66,27 @@ let data = [{
 export default data;
 
 
-
+// ajax 목업데이터
+// { "data" = [{
+//     id : 0,
+//     title: "petra eriksson",
+//     image: "https://user-images.githubusercontent.com/75570030/146324789-9718764f-a113-4dc0-ba9a-7f1f970668ba.PNG",
+//     content: "design crush의 작품입니다. 인간의 내면을 아름답게 표현하였네요!",
+//     price: 660000
+//     },
+//     {
+//     id : 1,
+//     title: "stargazing",
+//     image: "https://user-images.githubusercontent.com/75570030/146324804-c583dbb9-19fb-453d-9b0b-ba59a1a5a308.PNG",
+//     content: "behance의 작품입니다. 밤하늘의 별들이 아름답네요!",
+//     price: 250000
+//     },
+//     {
+//     id : 2,
+//     title: "desert sahara",
+//     image: "https://user-images.githubusercontent.com/75570030/146324810-4f6b02ba-7b6b-4823-8e5f-068f68497228.PNG",
+//     content: "olivelyart의 작품입니다. 적절한 색상으로 사막을 표현하였네요",
+//     price: 390000
+//     },
+// ];
+// }
