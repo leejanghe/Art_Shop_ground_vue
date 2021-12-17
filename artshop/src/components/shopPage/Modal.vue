@@ -33,10 +33,12 @@ export default {
     watch :{
         quantity(a){
            if(isNaN(a) === true){
-              alert('글자 입력은 안됩니다.')
+            //   alert('글자 입력은 안됩니다.')
+            this.$swal('글자 입력은 안됩니다.','숫자만써주세요^^','error');
               this.quantity = 1; 
            } else if(a > 3){
-               alert('3이하만 구입 가능합니다')
+            //    alert('3이하만 구입 가능합니다')
+            this.$swal('3이하만 가능합니다','죄송합니다ㅠ','error');
                this.quantity =1;
            }
         }
