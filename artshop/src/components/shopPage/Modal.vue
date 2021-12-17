@@ -7,7 +7,8 @@
         <p>{{artData[clickModal].content}}</p>
         <input v-model.number="quantity">
         <p> {{artData[clickModal].price * quantity}} 원</p>
-        <button class="btn btn-danger" @click="close">닫기</button>
+        <button class="btn btn-success m-2" @click="buyin">구입</button>
+        <button class="btn btn-danger m-2" @click="close">닫기</button>
     </div>
 </div>
 </template>
@@ -28,7 +29,11 @@ export default {
     methods:{
         close(){
             this.$emit('closeModal', this.artData.id)
-        }
+        },
+        buyin(){
+            this.$swal( `${this.quantity}개 구매하셨습니다!`,'감사합니다^^','success');
+            this.$emit('closeModal')
+        },
     },
     watch :{
         quantity(a){
