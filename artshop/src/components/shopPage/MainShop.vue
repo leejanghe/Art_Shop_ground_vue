@@ -7,7 +7,7 @@
 </transition>
 
 <!-- 검색 컴포넌트 -->
-  <Hello />
+  <Hello :artData="artData"/>
 
 <!-- 정렬 버튼 -->
 <button class="btn btn-secondary m-2" @click="priceSortDe">높은 가격순</button>
