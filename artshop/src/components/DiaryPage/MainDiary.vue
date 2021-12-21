@@ -12,14 +12,14 @@
       <li @click="step = 0">Cancel</li>
     </ul>
     <ul class="header-button-right">
-      <li v-if="step ===1" @click="step++">Next</li>
-      <li v-if="step ===2" @click="publish">발행</li>
+      <!-- <li v-if="step ===1" @click="step++">Next</li> -->
+      <li v-if="step ===1" @click="publish">발행</li>
     </ul>
     <div class="logo">Art Diary</div>
    </div>
 
 
-<DiaryBody :diary="diary"/>
+<DiaryBody :diary="diary" :step="step" :uploadImg="uploadImg"/>
 
 
  <div class="footer">
@@ -45,10 +45,22 @@ export default {
         return {
             page : true,
             diary : dairyData,
+            step : 0,
+            uploadImg :'',
         }
     },
     components : {
         DiaryBody,
+    },
+    methods: {
+        upload(e){
+        let img = e.target.files;
+        console.log('1',img[0])
+        let url = URL.createObjectURL(img[0]);
+        console.log(url);
+        this.uploadImg = url;
+        this.step++
+        }
     },
 }
 </script>
@@ -105,7 +117,7 @@ ul {
 .header-button-right {
   color: #fff;
   float: right;
-  width: 50px;
+  width: 80px;
   cursor: pointer;
   margin-top: 10px;
 }
