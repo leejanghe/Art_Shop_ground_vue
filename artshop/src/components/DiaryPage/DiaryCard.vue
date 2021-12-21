@@ -47,10 +47,10 @@ export default {
   padding: 20px;
 }
 .post-body {
- /* background-image: url("https://bramptonist.com/wp-content/uploads/2018/10/art-paint-painting.jpeg"); */
- /* background-image: url("https://www.crescenthill.com/wp-content/uploads/2021/07/Banner-Image-188435-e1626372383514.jpg"); */
-     /* background-image: url("https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg"); */
-         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQdlKqr6Jxh8DOE0o1sTrgELhbmjGboVtDaw&usqp=CAU");
+ background-image: url("https://bramptonist.com/wp-content/uploads/2018/10/art-paint-painting.jpeg");
+ /* background-image: url("https://www.crescenthill.com/wp-content/uploads/2021/07/Banner-Image-188435-e1626372383514.jpg");
+     background-image: url("https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg");
+         background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQdlKqr6Jxh8DOE0o1sTrgELhbmjGboVtDaw&usqp=CAU"); */
   height: 500px;
   width: 100%;
   background-position: center;
