@@ -19,7 +19,7 @@
    </div>
 
 
-<DiaryBody :diary="diary" :step="step" :uploadImg="uploadImg"/>
+<DiaryBody @write="myWrite = $event" :diary="diary" :step="step" :uploadImg="uploadImg"/>
 
 
  <div class="footer">
@@ -44,9 +44,10 @@ export default {
     data() {
         return {
             page : true,
-            diary : dairyData,
+            diary : [...dairyData],
             step : 0,
             uploadImg :'',
+            myWrite:'',
         }
     },
     components : {
@@ -60,6 +61,20 @@ export default {
         console.log(url);
         this.uploadImg = url;
         this.step++
+        },
+
+        publish(){
+        let myPost = {
+        name: "Kim Hyun",
+        userImage: "https://placeimg.com/100/100/arch",
+        postImage: this.uploadImg,
+        likes: 36,
+        date: "May 15",
+        liked: false,
+        content: this.myWrite,
+      };
+        this.diary.unshift(myPost);
+        this.step = 0;
         }
     },
 }
