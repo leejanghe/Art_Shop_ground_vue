@@ -18,9 +18,8 @@
     <div class="logo">Art Diary</div>
    </div>
 
-<p>{{diary}}</p>
 
-<DiaryBody />
+<DiaryBody :diary="diary"/>
 
 
  <div class="footer">

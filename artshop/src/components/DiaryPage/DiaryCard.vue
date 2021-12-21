@@ -1,14 +1,14 @@
 <template>
   <div class="post">
     <div class="post-header">
-      <div class="profile"></div>
-      <span class="profile-name">ChanKim</span>
+      <div class="profile" :style="{ backgroundImage : `url(${diary.userImage})`}"></div>
+      <span class="profile-name">{{diary.name}}</span>
     </div>
-    <div class="post-body"></div>
+    <div class="post-body" :style="{ backgroundImage : `url(${diary.postImage})`}"></div>
     <div class="post-content">
-      <p>43 Likes</p>
-      <p><strong>글쓴이아이디</strong> 임시내용</p>
-      <p class="date">May 15</p>
+      <p>{{diary.likes}} Likes</p>
+      <p><strong>{{diary.name}}</strong> {{diary.content}}</p>
+      <p class="date">{{diary.date}}</p>
       <hr />
     </div>
 </div>
@@ -17,6 +17,9 @@
 <script>
 export default {
     name : 'DiaryCard',
+    props : {
+        diary : Object,
+    },
 }
 </script>
 
@@ -47,7 +50,7 @@ export default {
   padding: 20px;
 }
 .post-body {
- background-image: url("https://bramptonist.com/wp-content/uploads/2018/10/art-paint-painting.jpeg");
+ /* background-image: url("https://bramptonist.com/wp-content/uploads/2018/10/art-paint-painting.jpeg"); */
  /* background-image: url("https://www.crescenthill.com/wp-content/uploads/2021/07/Banner-Image-188435-e1626372383514.jpg");
      background-image: url("https://www.pictureframesexpress.co.uk/blog/wp-content/uploads/2020/05/7-Tips-to-Finding-Art-Inspiration-Header-1024x649.jpg");
          background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQdlKqr6Jxh8DOE0o1sTrgELhbmjGboVtDaw&usqp=CAU"); */
