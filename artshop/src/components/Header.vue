@@ -15,7 +15,7 @@
           <router-link to="/shop"><a class="nav-link active" href="#">Shop</a></router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/like"><a class="nav-link active">Likes</a></router-link>
+          <router-link to="/diary"><a class="nav-link active">Diary</a></router-link>
         </li>
       </ul>
     </div>

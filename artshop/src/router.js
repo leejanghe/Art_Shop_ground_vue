@@ -1,7 +1,8 @@
 import { createWebHistory, createRouter } from "vue-router";
 import LandingHome from "./components/HomePage/LandingHome.vue";
 import MainShop from "./components/shopPage/MainShop.vue";
-import Like from './components/likePage/Like.vue';
+import MainDiary from "./components/DiaryPage/MainDiary.vue";
+
 
 const routes = [
   {
@@ -13,9 +14,9 @@ const routes = [
       component: MainShop,
   },
   {
-    path:"/like",
-    component: Like,
-},
+    path:"/diary",
+    component: MainDiary,
+  },
 ];
 
 const router = createRouter({
