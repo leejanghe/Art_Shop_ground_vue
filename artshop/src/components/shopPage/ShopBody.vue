@@ -12,7 +12,7 @@
 export default {
     name: "ShopBody",
     props: {
-        artData: Array,
+        artData: Object,
     },
     // 부모에게 보낼때 emit쓰기 프롭스는 read only여서 변경 x
      methods:{

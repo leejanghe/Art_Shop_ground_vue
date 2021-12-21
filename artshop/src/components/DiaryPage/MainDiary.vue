@@ -18,6 +18,7 @@
     <div class="logo">Art Diary</div>
    </div>
 
+<p>{{diary}}</p>
 
 <DiaryBody />
 
@@ -35,12 +36,16 @@
 <script>
 
 import DiaryBody from './DiaryBody.vue'
+import {dairyData} from '../../assets/data.js'
+
+console.log('da',dairyData)
 
 export default {
     name: 'MainDiary',
     data() {
         return {
             page : true,
+            diary : dairyData,
         }
     },
     components : {

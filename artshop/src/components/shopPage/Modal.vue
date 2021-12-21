@@ -24,7 +24,7 @@ export default {
     props : {
         clickModal: Number,
         isModal: Boolean,
-        artData: Array,
+        artData: Object,
     },
     methods:{
         close(){

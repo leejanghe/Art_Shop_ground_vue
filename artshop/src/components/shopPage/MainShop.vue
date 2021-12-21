@@ -31,11 +31,11 @@
 <script>
 import Hello from './Hello.vue'
 import ShopBody from './ShopBody.vue'
-import data from '../../assets/data.js'
+import {data} from '../../assets/data.js'
 import Modal from './Modal.vue'
 import axios from 'axios'
 
-console.log('11',data)
+// console.log('11',data)
 
 export default {
     name : 'MainShop',
