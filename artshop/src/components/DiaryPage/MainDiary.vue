@@ -66,7 +66,7 @@ export default {
         publish(){
         let myPost = {
         name: "JoyCoding",
-        userImage: "https://placeimg.com/100/100/arch",
+        userImage: "https://placeimg.com/100/100/people",
         postImage: this.uploadImg,
         likes: 36,
         date: new Date().toISOString().substr(0, 10),
