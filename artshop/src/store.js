@@ -6,7 +6,7 @@ const store = createStore({
         return{
             name : 'kim',
             data : dairyData,
-            liked : 35,
+            liked : 0,
             isLike : false,
             color : '',
         }

@@ -2,7 +2,8 @@
   <div>
       <div v-if="step === 0">
       <DiaryCard 
-      :diary="diary[i]" v-for="(a,i) in diary" :key="i" />
+      :diary="diary[i]" 
+      v-for="(a,i) in diary" :key="i"/>
       </div>
       <div v-if="step === 1">
    <div class="upload-image" :style="`background-image:url(${uploadImg})`"></div>
