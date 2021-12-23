@@ -69,7 +69,7 @@ export default {
         userImage: "https://placeimg.com/100/100/arch",
         postImage: this.uploadImg,
         likes: 36,
-        date: "May 15",
+        date: new Date().toISOString().substr(0, 10),
         liked: false,
         content: this.myWrite,
       };

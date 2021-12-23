@@ -52,7 +52,7 @@ export default {
             clickModal : 0,
         }
     },
-    // 정렬 기능 함수
+    // 더보기 api
     methods: {
         more(){
             axios.get('https://run.mocky.io/v3/b5a2228a-deaf-405f-af77-85b4a955b6d9')
@@ -73,6 +73,7 @@ export default {
                 })
             })
         },
+        // 정렬기능 함수
         priceSort(){
       this.artData.sort((a,b)=>{
         return a.price - b.price;
