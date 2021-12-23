@@ -3,6 +3,10 @@
 <img width="1440" alt="img" src="https://user-images.githubusercontent.com/75570030/147211156-0947abe7-7b23-4bfa-a766-312a5736fea1.png">
 
 
+## 데모 사이트
+
+[https://art-ground-shop-github-io.vercel.app/](https://art-ground-shop-github-io.vercel.app/)
+
 ## 프로젝트 목표
 - Vue에 쓰여지는 다양한 메서드와 더미 api를 활용하여 데이터 바인딩을 하고 vue에 대한 전반적인 지식을 습득하기 위한 연습용 프로젝트 입니다.
 
