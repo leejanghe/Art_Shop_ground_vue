@@ -65,7 +65,7 @@ export default {
 
         publish(){
         let myPost = {
-        name: "Kim Hyun",
+        name: "JoyCoding",
         userImage: "https://placeimg.com/100/100/arch",
         postImage: this.uploadImg,
         likes: 36,

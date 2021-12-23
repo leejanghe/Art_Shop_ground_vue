@@ -1,7 +1,8 @@
 <template>
   <div>
       <div v-if="step === 0">
-      <DiaryCard :diary="diary[i]" v-for="(a,i) in diary" :key="i"/>
+      <DiaryCard 
+      :diary="diary[i]" v-for="(a,i) in diary" :key="i" />
       </div>
       <div v-if="step === 1">
    <div class="upload-image" :style="`background-image:url(${uploadImg})`"></div>
@@ -32,7 +33,7 @@ export default {
 <style>
 .upload-image{
 width: 100%;
-height: 450px;
+height: 500px;
 background: cornflowerblue;
 background-size : cover;
 }

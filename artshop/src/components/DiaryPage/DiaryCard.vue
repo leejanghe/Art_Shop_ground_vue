@@ -3,10 +3,11 @@
     <div class="post-header">
       <div class="profile" :style="{ backgroundImage : `url(${diary.userImage})`}"></div>
       <span class="profile-name">{{diary.name}}</span>
+      
     </div>
     <div class="post-body" :style="{ backgroundImage : `url(${diary.postImage})`}"></div>
     <div class="post-content">
-      <p>{{diary.likes}} Likes</p>
+      <p>{{$store.state.liked}} Likes <i :style= "{color: `${$store.state.color}`}" class="fas fa-heart" @click="$store.commit('likeCard')"></i></p> 
       <p><strong>{{diary.name}}</strong> {{diary.content}}</p>
       <p class="date">{{diary.date}}</p>
       <hr />
@@ -47,7 +48,7 @@ export default {
 }
 .post-header {
   height: 70px;
-  padding: 20px;
+  padding: 10px;
 }
 .post-body {
  /* background-image: url("https://bramptonist.com/wp-content/uploads/2018/10/art-paint-painting.jpeg"); */
@@ -59,7 +60,6 @@ export default {
   background-position: center;
   background-size: cover;
   margin: auto;
-  scale: 0.5;
 }
 
 .post-content {
