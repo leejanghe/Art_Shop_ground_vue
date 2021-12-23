@@ -3,12 +3,12 @@
   <div>
 <div>
     <div class="row featurette">
-      <div class="col-md-7">
+      <div class="col-md-5">
         <h2 class="featurette-heading mt-5">fasdf<span class="text-muted"> asdfasd</span></h2>
         <p class="lead">fasdfsdaf</p>
       </div>
       <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="900" height="500"  role="img" aria-label="Placeholder: 800x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
 
       </div>
     </div>
@@ -17,7 +17,7 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading mt-5" >asdf <span class="text-muted">asdf </span></h2>
+        <h2 class="featurette-heading mt-5" >asdf <span class="text-muted"></span></h2>
         <p class="lead">fasdfasfadsf</p>
       </div>
       <div class="col-md-5 order-md-1">
